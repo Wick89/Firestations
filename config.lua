@@ -3,22 +3,26 @@
 -- ======================================================================
 Config = {}
 
+Config.Locales = {
+    ["VehicleStored"] = "Vehicle Stored!",
+}
+
 -- Job name that you use qb -- "ambulance"
 Config.JobName = "ambulance"
 
--- Set yours Fuel here
-Config.fuel = "cdn-fuel"
+-- is you use my Blips set it to true or false
+Config.UseBlips = true
 
-
+-- Put here your fuel system LegacyFuel by default
+Config.FuelSystem = "cdn-fuel"
 
 -- Config of vehicles players can interact with
--- If you want to add a truck just put the spawn name and a , after
 Config.Vehicles = {
-     'pengine',
-     'firetruk',
-     'fireone',
-     'velocityeng',
-     'qrescue'
+    "firetruk",
+	"fireone",
+    "velocityeng",
+    "qrescue",
+    "pengine"
 }
 -- Authorized Vehicles Rank
 Config.AuthorizedVehicles = {
@@ -56,6 +60,7 @@ Config.AuthorizedVehicles = {
     [5] = {
         ["fireone"] = "Engine 1",
         ["velocityeng"] = "Engine 2",
+        ["pengine"] = "Engine 3",
     },
     -- Sergeant
     [6] = { 
@@ -86,55 +91,84 @@ Config.AuthorizedVehicles = {
     },      
 }
 
+Config.turnout = {
+    ['suitpants'] = {
+        item = 158,
+        texture = 0
+    },
+    ['scba'] = {
+        item = 173,
+        texture = 0
+    },
+    ['suittop'] = {
+        item = 423,
+        texture = 0
+    },
+    ['suitmask'] = {
+        item = 58,
+        texture = 0
+    },
+    ['suitshoes'] = {
+        item = 22,
+        texture = 0
+    },
+    ['arms'] = {
+        item = 170,
+        texture = 3
+    },
+}
+
 Config.Locations = {
-    ["vehicleped"] = {
+    ["stations"] = {
         -- Rockford Station
         {
             coords = vector4(-633.8, -101.22, 38.05, 114.82),
             spawn = vector4(-645.96, -112.16, 37.9, 118.87),
+            -- stations blip
+            label = "Fire Dept 1", 
+            blipid = 686,
         },
         -- Sandy
         {
             coords = vector4(1681.43, 3596.74, 36.48, 212.09),
             spawn = vector4(1693.86, 3590.73, 36.53, 215.63),
+           -- stations blip
+            label = "Fire Dept 32", 
+            blipid = 717,
         },
         -- Davis Fire DEPT
         {
             coords = vector4(219.39, -1651.29, 29.82, 159.25),
             spawn = vector4(202.75, -1676.46, 29.8, 49.09),
+            -- stations blip
+            label = "Davis Fire Dept 18", 
+            blipid = 703,
         },
-
+        -- Pillbox
         {
             coords = vector4(338.05, -586.37, 28.8, 60.02),
             spawn = vector4(326.71, -572.47, 28.8, 330.76),
+            -- stations are in Pillbox<!
+            --blipid = 47,
         },
         -- Fire Dept 7
         {
             coords = vector4(1193.38, -1495.59, 34.84, 268.58),
             spawn = vector4(1197.02, -1506.51, 34.69, 87.45),
-        }
+            -- stations blip
+            label = "Fire Dept 7",
+            blipid = 692,
+        },
     },
-    ["Sign"] = { 
+    ["Duty"] = { 
         -- Pillbox
         vector3(307.56, -595.23, 43.28),
     },
     
     ["stash"] = { 
+        -- Rockford Station
         vector3(-625.01, -111.28, 45.5),
-    },   
-    -- stations -- you can do all in one, but I have blips number for each of them
-    ["stations1"] = {
-        [1] = {label = "Fire Dept 1", coords = vector4(-632.53, -109.53, 44.65, 309.87)},
-    },
-    ["stations7"] = {
-        [1] = {label = "Fire Dept 7", coords = vector4(1200.77, -1473.97, 44.68, 309.87)},
-    },
-    ["stations32"] = {
-        [1] = {label = "Fire Dept 32", coords = vector4(1690.06, 3604.27, 36.48, 309.87)},
-    },
-    ["stations18"] = {
-        [1] = {label = "Davis Fire Dept 18", coords = vector4(206.25, -1650.91, 39.84, 309.87)},
-    },
+    },  
 }
 
 Config.Items = {

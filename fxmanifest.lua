@@ -1,4 +1,4 @@
-fx_version "cerulean"
+fx_version "adamant"
 game "gta5"
 
 author "(Wick)#5854"
@@ -10,8 +10,10 @@ shared_scripts {
 }
 
 client_scripts {
-    'client/client.lua',
-    'client/VehiclesGarage.lua'
+    'client/Client.lua',
+    'client/VehiclesGarage.lua',
+    'client/Tools.lua',
+    'client/Turnout.lua'
 }
 
 server_script 'server/server.lua'
