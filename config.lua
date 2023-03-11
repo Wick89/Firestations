@@ -5,6 +5,16 @@ Config = {}
 
 Config.Locales = {
     ["VehicleStored"] = "Vehicle Stored!",
+    ["Invalidtones"] = "Invalid tones, please check your pagers",
+    ["SoundSirens"] = "Invalid stations to sound, check your command arguments",
+    ["turnedoff"] = "pager was turned off",
+    ["Cancel"] = "pager was cancel",
+    ["whitelisted"] = "You are not whitelisted to this command",
+    ["pagerset"] = "pager set to:",
+    ["examined"] = "Tones are being examined, please wait",
+    ["searched"] = "Toner has already been searched",
+    ["search"] = "search",
+    ["supplied"] = "One or more supplied stations are already sounding!",
 }
 
 -- Job name that you use qb -- "ambulance"
